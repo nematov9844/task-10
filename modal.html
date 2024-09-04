@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="flex fixed z-50 gap-4 font-bold text-3xl  justify-center items-start w-full ">
+            <a href="./index.html">Drower</a>
+            <a href="./modal.html">Modal</a>
+            <a href="./btn.html">Btn title</a>
+        </nav>
+    </header>
+    <section>
+        <div class="modal z-20 bg-[rgba(0,0,0,0.5)] h-screen flex w-full justify-center hidden items-center">
+            <div class="bg-blue-400 w-auto h-auto flex justify-start p-4 gap-3 items-start flex-col">
+                <h1 class="text-3xl font-bold">Modal</h1>
+                <input class="text-black placeholder:text-gray-700 rounded-md py-2 px-3" type="text" placeholder="enter your text">
+                <input class="text-black placeholder:text-gray-700 rounded-md py-2 px-3" type="text" placeholder="enter your text">
+                <div class="pb-9">
+                    <button onclick="toggle()" class="absolute z-30 text-white py-2 px-3 bg-red-500 rounded-md font-bold text-xl " >Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="fixed z-10 flex w-full justify-center items-center h-screen">
+    
+            <button onclick="toggle()" class="text-white py-2 px-3 bg-red-500 rounded-md font-bold text-xl " >Open</button>
+        </div>
+    
+    </section>
+    <script>
+        function toggle(){
+            document.querySelector(".modal").classList.toggle("hidden")
+        }
+    </script>
+</body>
+
+</html>
